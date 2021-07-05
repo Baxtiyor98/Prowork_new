@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% block content %}
+{% csrf_token %}
+{% comment %} <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form> {% endcomment %}
+<div>
+	<a href="{% url 'sign_up' %}">
+			<h2>JOIN US FOR FREE</h2>
+	</a>
+</div><hr>
+
+<div class="blok">
+  <div class="worker">
+    <a href="{% url 'practice' %}">
+        <img src="" alt="Practice" style="width:100%;">
+    </a>
+  </div>
+  <div class="content">
+    <h1>Practical worker</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  </div><hr>
+
+  <div class="startup">
+    <a href="{% url 'startup' %}">
+      <img src="" alt="startup" style="width:100%;">
+    </a>
+  </div>
+  <div class="content">
+    <h1>StartUpper</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  </div><hr>
+
+  <div class="develop">
+	  <a href="{% url 'developer' %}">
+  		<img src="C:\Users\dst\Desktop\developer.jpg" alt="developer" style="width:100%;">
+	  </a>
+  </div>
+  <div class="content">
+    <h1>Developer</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  </div><hr>
+</div>
+
+
+
+{% endblock %}

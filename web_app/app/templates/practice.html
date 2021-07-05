@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Practical worker page</h1>
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<table>
+				{{form}}
+			</table>
+			<a href="'saving.html'"><button type="submit">Send</button></a>
+		</form>
+{% endblock content %}
