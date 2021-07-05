@@ -14,15 +14,16 @@ from .models import *
 #         model = Practical_worker
 #         fields = '__all__'
 class StartupForm(forms.Form):
+    title = forms.CharField(label='Title', max_length=200)
     number = forms.CharField(label='Number',max_length=13)
     project = forms.FileField(label='Project file')
     comment =forms.TimeField(label='Description')
-    image = forms.ImageField()
+    image = forms.ImageField(label='Your image')
     
 class Prog_levelForm(forms.ModelForm):
     class Meta:
         model = Prog_level
-        fields = '__all__'
+        fields = ['title','project','comment','skills','level','type_work','resume','image']
 class RegistrationForm(UserCreationForm):
     class Meta:
         model = User
