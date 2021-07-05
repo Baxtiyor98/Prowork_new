@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% block content %}
+<div class="Login">
 		<h1>Login</h1>
 		<form action="" method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
@@ -13,6 +14,6 @@
 				<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 			  </div>
 			  <button type="submit" class="btn btn-primary">Log in</button>
-
 		</form>
+</div>	
 {% endblock content %}

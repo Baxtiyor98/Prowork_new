@@ -1,3 +1,9 @@
+.Login{
+  width:40%;
+  margin:0 auto;
+}
+
+
 /* Dropdown Button */
 .dropbtn {
     background-color:turquoise;
@@ -115,12 +121,12 @@ input[name=search]:focus {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 100%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
-    padding: 20px;
+    width: 65%;
+    padding: 50px;
     text-align: center;
   }
   
@@ -131,12 +137,12 @@ input[name=search]:focus {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 230%;
+    top: 215%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
-    padding: 20px;
+    width: 65%;
+    padding: 50px;
     text-align: center;
   }
   .blog .bg-text2 {
@@ -146,11 +152,11 @@ input[name=search]:focus {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 370%;
+    top: 355%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
-    padding: 20px;
+    width: 65%;
+    padding: 50px;
     text-align: center;
   }
