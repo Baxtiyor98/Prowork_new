@@ -6,43 +6,48 @@
         {{ form.as_p }}
     </form> {% endcomment %}
 <div>
-	<a href="{% url 'sign_up' %}">
+	<a href="{% url 'sign_up' %}" align="center">
 			<h2>JOIN US FOR FREE</h2>
 	</a>
 </div><hr>
 
-<div class="blok">
-  <div class="worker">
-    <a href="{% url 'practice' %}">
-        <img src="" alt="Practice" style="width:100%;">
-    </a>
+<a href="{% url 'practice' %}">
+<div class="blog">
+  <div class="bg-image">
+    <img src="static/images/practice2.jpg" alt="Practice" style="width:100%;">
   </div>
-  <div class="content">
+  <div class="bg-text">
     <h1>Practical worker</h1>
     <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
   </div><hr>
+</div>
+</a>
 
-  <div class="startup">
-    <a href="{% url 'startup' %}">
-      <img src="" alt="startup" style="width:100%;">
-    </a>
+
+<a href="{% url 'startup' %}">
+<div class="blog">
+  <div class="bg-image">
+    <img src="static/images/startup1.jpg" alt="startup" style="width:100%;">
   </div>
-  <div class="content">
-    <h1>StartUpper</h1>
+  <div class="bg-text1">
+    <h1>Startupper</h1>
     <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
   </div><hr>
+</div>
+</a>
 
-  <div class="develop">
-	  <a href="{% url 'developer' %}">
-  		<img src="C:\Users\dst\Desktop\developer.jpg" alt="developer" style="width:100%;">
-	  </a>
+
+<a href="{% url 'startup' %}">
+<div class="blog">
+  <div class="bg-image">
+    <img src="static/images/developer.jpg" alt="developer" style="width:100%;">
   </div>
-  <div class="content">
+  <div class="bg-text2">
     <h1>Developer</h1>
     <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
   </div><hr>
 </div>
-
+</a>
 
 
 {% endblock %}

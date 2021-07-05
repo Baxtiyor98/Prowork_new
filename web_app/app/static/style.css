@@ -76,21 +76,81 @@ input[name=search]:focus {
     font-family: Arial;
     font-size: 17px;
   }
-  
-  .worker {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+
+
+
+
+
+
+  body, html {
+    height: 100%;
+    margin: 50 ;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
-  .worker img {vertical-align: middle;}
+  * {
+    box-sizing: border-box;
+  }
   
-  .worker .content {
+  .blog .bg-image {
+   
+    /* Add the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    
+    /* Full height */
+    height: 10%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: width=60px height=80px ;
+  }
+  
+  /* Position text in the middle of the page/image */
+  .blog .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.596); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
     position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
     padding: 20px;
+    text-align: center;
+  }
+  
+  .blog .bg-text1 {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.753); /* Black w/opacity/see-through */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 230%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+  .blog .bg-text2 {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 370%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
   }

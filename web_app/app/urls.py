@@ -11,5 +11,4 @@ urlpatterns = [
     path('startup/', startup, name = 'startup'),
     path('practice/', practice, name = 'practice'),
     path('developer/', developer, name = 'developer'),
-    path('user_details/', user_details, name = 'user_details'),
 ]

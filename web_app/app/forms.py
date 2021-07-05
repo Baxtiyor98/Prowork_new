@@ -3,24 +3,25 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import *
 
-class ChooseForm(forms.Form):
-    level = forms.CharField(label='Choice your level', widget=forms.Select(choices=CHOICES))
-class StartupForm(forms.ModelForm):
+# class ChooseForm(forms.Form):
+#     level = forms.CharField(label='Choice your level', widget=forms.Select(choices=CHOICES))
+# class StartupForm(forms.ModelForm):
+#     class Meta:
+#         model = Startapp
+#         fields = '__all__'
+# class PracticeForm(forms.ModelForm):
+#     class Meta:
+#         model = Practical_worker
+#         fields = '__all__'
+class StartupForm(forms.Form):
+    number = forms.CharField(label='Number',max_length=13)
+    project = forms.FileField(label='Project file')
+    comment =forms.TimeField(label='Description')
+    image = forms.ImageField()
+    
+class Prog_levelForm(forms.ModelForm):
     class Meta:
-        model = Startapp
-        fields = '__all__'
-class PracticeForm(forms.ModelForm):
-    class Meta:
-        model = Practical_worker
-        fields = '__all__'
-
-class DeveloperForm(forms.ModelForm):
-    class Meta:
-        model = Developers
-        fields = '__all__'
-class User_detailsForm(forms.ModelForm):
-    class Meta:
-        model = User_details
+        model = Prog_level
         fields = '__all__'
 class RegistrationForm(UserCreationForm):
     class Meta:
