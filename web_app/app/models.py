@@ -19,6 +19,6 @@ class Prog_level(models.Model):
     comment = models.TextField(max_length=2000, null=True)
     level = models.CharField(max_length=20, choices=CHOICES,null=True)
     skills = models.CharField(max_length=200, null=True)
-    image = models.ImageField(null=True)
+    avatar = models.ImageField(null=True)
     resume = models.FileField(null=True)
     type_work = models.CharField(max_length=20, choices=Choice_type,null=True)

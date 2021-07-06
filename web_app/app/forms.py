@@ -23,7 +23,7 @@ class StartupForm(forms.Form):
 class Prog_levelForm(forms.ModelForm):
     class Meta:
         model = Prog_level
-        fields = ['title','project','comment','skills','level','type_work','resume','image']
+        fields = ['title','project','comment','skills','level','type_work','resume','avatar']
 class RegistrationForm(UserCreationForm):
     class Meta:
         model = User
