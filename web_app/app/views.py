@@ -14,14 +14,9 @@ def index(request):
         'apps': apps
     }
     return render(request, 'index.html', context)
-def choice(request):
-    form = StartupForm()
-    context = {
-        'form':form
-    }
 def practice(request):
     if request.user.username:
-        form = Prog_levelForm(request.POST,request.FILES)
+        form = PractitionerForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect('level')
@@ -32,24 +27,20 @@ def practice(request):
     else:
         return redirect('login')
 def startup(request):
-    form = StartupForm()
-    if request.method == 'POST':
-        # print(request.POST,request.FILES)
-        prog_level = Prog_level.objects.get(user=request.user)
-        prog_level.number = request.POST.get('number')
-        prog_level.comment = request.POST.get('comment')
-        prog_level.project = request.FILES.get('project')
-        prog_level.image = request.FILES.get('image')
-        prog_level.save()
-        print('image... ',prog_level.image)
-        return redirect('level')
-    context = {
-        'form':form
-    }
-    return render(request,'startapp.html',context)   
+    if request.user.username:
+        form = StartapperForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('level')
+        context = {
+            'form':form
+        }
+        return render(request,'startapp.html',context)
+    else:
+        return redirect('login') 
 def developer(request):
     if request.user.username:
-        form = Prog_levelForm(request.POST,request.FILES)
+        form = DeveloperForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect('level')
@@ -67,7 +58,7 @@ def regestration(request):
         password = request.POST.get('password1')
         user = authenticate(request=request,username=username,password=password)
         if user:
-            profile = Prog_level.objects.create(user = user)
+            profile = CustomUser.objects.create(user = user)
             profile.save()
             login(request,user)
             return redirect('login')
@@ -96,10 +87,21 @@ def log_out(request):
 def level(request):
     return render(request, 'level.html', {})
 def func(user):
-    p = Prog_level.objects.get(user=user)
-    if p.level == 'practice':
+    p = CustomUser.objects.get(user=user)
+    if p.user_type == 'practice':
         return redirect('practice')
-    if p.level == 'startup':
+    if p.user_type == 'startup':
         return redirect('startup')
-    if p.level == 'developer':
+    if p.user_type == 'developer':
         return redirect('developer')
+def users(request):
+    p1 = Practitioner.objects.all()
+    p2 = Developer.objects.all()
+    p = p1 | p2
+    context = {
+        'app': p
+    }
+    return render(request, 'main.html', context({p.username},{p.programming_language},{p.avatar}))
+
+def saving(request):
+    return render(request, 'level.html', {})
